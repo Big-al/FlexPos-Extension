@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FlexPOS</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        .bg-skew {
+            height: 100%;
+        }
+
+        body {
+            background: #222;
+            text-align: center;
+            font-family: 'Source Sans Pro', sans-serif;
+            position: relative;
+        }
+
+        .bg-skew {
+            background: whitesmoke;
+            -webkit-transform: skew(0deg, -10deg);
+            transform: skew(0deg, -10deg);
+            padding: 200px 0;
+            margin-top: -190px;
+        }
+
+        .content {
+            width: 60%;
+            -webkit-transform: skew(0deg, 10deg);
+            transform: skew(0deg, 10deg);
+        }
+
+        nav {
+            background: #222;
+            height: 50px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            -webkit-transition: .13s all;
+            transition: .13s all;
+        }
+
+        nav,
+        .bg-skew,
+        nav ul {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav ul {
+            height: 100%;
+            width: 95vw;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav li:first-child {
+            margin-right: auto;
+            font-size: 1.6em;
+            font-weight: 600
+        }
+
+        nav a,
+        .content a,
+        footer a {
+            -webkit-transition: .3s all;
+            transition: .3s all;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 12px;
+            margin-right: -4px;
+        }
+
+        nav a:hover {
+            color: tomato;
+        }
+
+        .content,
+        footer,
+        nav a {
+            color: #fff;
+        }
+
+        .content {
+            padding-top: 160px;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+
+        .content p {
+            font-weight: 300;
+            padding-top: 12px;
+        }
+
+        .content a {
+            font-weight: 400;
+            color: #fff;
+            padding: 3px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .content a:hover {
+            background: #222;
+            color: #fff;
+        }
+
+        footer {
+            padding-top: 300px;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: tomato;
+            padding: 5px
+        }
+
+        footer a:hover {
+            background: tomato;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .goto-button {
+            width: 140px;
+            height: 50px;
+            border: 2px solid #222;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 70px 0 40px 43%;
+        }
+
+        .goto-button a {
+            font-family: arial;
+            font-size: 16px;
+            color: #222;
+            text-decoration: none;
+            line-height: 50px;
+            transition: all .5s ease;
+            z-index: 2;
+            position: relative;
+        }
+
+        .eff {
+            width: 140px;
+            height: 50px;
+            left: -140px;
+            background: #222;
+            position: absolute;
+            transition: all .5s ease;
+            z-index: 1;
+        }
+
+        .goto-button:hover .eff {
+            left: 0;
+        }
+
+        .goto-button:hover a {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="bg-skew">
+    <div class="content">
+        <img href="https://login.flexpos.com" src="flexpos-logo.svg">
+        <div class="goto-button">
+            <div class="eff"></div>
+            <a href="https://login.flexpos.com"> Go to BackOffice </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
